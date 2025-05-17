@@ -27,16 +27,19 @@ Create database [manifests](./00-DB-manifests-OCP-K8s/README.md)
 
 2. Java Spring-Boot Hello World - ___quay.io/mukeshs1306/noventiqvp-springboot-hello:latest___
 
-3. Java Spring-boot with Camel and Kafka (Healthcare demo app) - ___quay.io/mukeshs1306/noventiqvp-springboot-pgdb-camelkafka:latest___
-
-4. Java Quarkus Hello World  
+3. Java Quarkus Hello World  
                              ___quay.io/mukeshs1306/noventiqvp-quarkus-jvm-hello:latest___    
                              ___quay.io/mukeshs1306/noventiqvp-quarkus-native-hello:latest___   
                              ___quay.io/mukeshs1306/noventiqvp-quarkus-nativemicro-hello:latest___
 
-5. Javascript NodeJS Hello World - ___quay.io/mukeshs1306/noventiqvp-nodejs-hello:latest___
+4. Javascript NodeJS Hello World - ___quay.io/mukeshs1306/noventiqvp-nodejs-hello:latest___
 
 
 <u>_Apps with DB_</u>
 
 1. Java Spring-Boot ToDO app - ___quay.io/mukeshs1306/noventiqvp-springboot-pgdb-todo:latest___
+
+2. Java Quarkus ToDO app   
+                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
+                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
+                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
