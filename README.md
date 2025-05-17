@@ -1,7 +1,4 @@
-# Noventiq valuepoint demo applications
-
-**Demo applications of Noventiq valuepoint**
-
+# Demo applications
 
 <u>___Available demo apps___</u>
 
