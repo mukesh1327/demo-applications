@@ -5,23 +5,22 @@
 
 <u>___Available demo apps___</u>
 
-1. [Java SpringBoot Hello World](./01-Hello-world-apps/01-java-springboot-hello-world/README.md)
+1. [Java SpringBoot Hello World](./01-Springboot-hello-world/README.md)
 
-2. [Java Quarkus Hello World](./01-Hello-world-apps/02-java-quarkus-hello-world/README.md)
+2. [Java Quarkus Hello World](./02-Quarkus-hello-world/README.md)
 
-3. [Python FastAPI Hello World](./01-Hello-world-apps/04-python-fastapi-hello-world/README.md)
+3. [Javascript NodeJS Hello World](./03-Nodejs-hello-world/README.md)
 
-4. [Javascript NodeJS Hello World](./01-Hello-world-apps/03-javascript-nodejs-hello-world/README.md)
-
+4. [Python FastAPI Hello World](./04-PyFastapi-hello-world/README.md)
 
 
 <u>___Demo with databases___</u>
 
-Create database [manifests](./00-DB-manifests-ocp/README.md)
+Create database [manifests](./00-DB-manifests-OCP-K8s/README.md)
 
-1. [Spring boot ToDo App demo](./02-Apps-with-DB/01-springboot-todo/README.md)
+1. [Spring boot ToDo App demo](./02-Springboot-todo-postgresDB/README.md)
 
-
+2. [Quarkus ToDo App demo](./02-Quarkus-todo-postgresDB/README.md)
 
 **Demo apps - Container images**
 

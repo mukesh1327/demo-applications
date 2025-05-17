@@ -11,6 +11,7 @@ ___Environment variables :___
 APP_TITLE=string
 
 
+
 ## How to run in local (Use any one)
 
 <u>**_Run as JVM (Java JDK)_**</u>  
@@ -58,3 +59,32 @@ APP_TITLE=string
 <u>**_Run as Native-micro_**</u>
 
 > oc apply -f ./k8s-manifests/native-micro -n demo-namespace
+
+
+Endpoints to try 
+
+POST /api/tasks/create (to create a task)
+
+    {
+        "name": "Test Task",
+        "description": "This is a sample task",
+        "status": "PENDING",
+        "dueDate": "2025-05-19T00:00:00Z"
+    }
+
+
+GET /api/tasks/read (to get all tasks)
+
+
+GET /api/tasks/get/{taskId} (to get a task by ID)
+
+
+PUT /api/tasks/update/{taskId} (to update a task)
+
+    {
+    "title": "Updated Task",
+    "status": "DONE",
+    "description": "Updated description"
+    }
+
+DELETE /api/tasks/delete/{taskId} (to delete a task)

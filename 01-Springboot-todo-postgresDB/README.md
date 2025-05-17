@@ -1,5 +1,9 @@
 # Spring boot Todo app with Postgres DB
 
+```shell script
+mvn spring-boot:run
+```
+
 In this demo a todo application is built using spring boot with postgresql
 
 Endpoints to try 
@@ -10,7 +14,7 @@ POST /api/tasks/create (to create a task)
         "name": "Test Task",
         "description": "This is a sample task",
         "status": "PENDING",
-        "dueDate": "2025-02-19T00:00:00Z"
+        "dueDate": "2025-05-19T00:00:00Z"
     }
 
 
@@ -24,6 +28,7 @@ PUT /api/tasks/update/{taskId} (to update a task)
 
     {
     "title": "Updated Task",
+    "status": "DONE",
     "description": "Updated description"
     }
 
