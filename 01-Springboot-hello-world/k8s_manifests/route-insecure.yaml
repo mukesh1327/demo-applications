@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: springboot-hello-http
+spec:
+  subdomain: springboot-hello-http
+  path: /
+  to:
+    kind: Service
+    name: springboot-hello-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None

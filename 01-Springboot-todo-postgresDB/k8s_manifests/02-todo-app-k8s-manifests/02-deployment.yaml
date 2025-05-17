@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  name: springboot-todo
+
+  labels:
+    app: springboot-todo
+    app.openshift.io/runtime: spring-boot
+
+spec:
+
+  replicas: 1
+
+  selector:
+    matchLabels:
+        app: springboot-todo
+
+  template:
+    metadata:
+      labels: 
+        app: springboot-todo
+
+    spec:
+
+      containers:
+        - name: todo-app
+
+          image: 'quay.io/mukeshs1306/springboot-todo-app:latest'
+
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
+          resources:
+            requests:
+              cpu: 460m
+              memory: 550Mi
+            limits:
+              cpu: 500m
+              memory: 600Mi
+
+          env:
+            - name: POSTGRES_DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-todo
+                  key: POSTGRES_DB_USERNAME
+
+            - name: POSTGRES_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-todo
+                  key: POSTGRES_DB_PASSWORD
+
+            - name: POSTGRES_DB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-todo
+                  key: POSTGRES_DB_URL

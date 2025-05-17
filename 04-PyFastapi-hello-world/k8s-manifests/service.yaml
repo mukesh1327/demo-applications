@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pyfastapi-hello-app
+  labels:
+    app: pyfastapi-hello-app
+    app.kubernetes.io/name: pyfastapi-hello-app
+    app.kubernetes.io/part-of: python-apps
+    app.openshift.io/runtime: python
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: pyfastapi-hello-app
+    deployment: pyfastapi-hello-app

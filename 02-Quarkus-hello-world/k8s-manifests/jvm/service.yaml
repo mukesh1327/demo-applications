@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: quarkus-jvm-hello-app
+  labels:
+    app: quarkus-jvm-hello-app
+    app.kubernetes.io/component: quarkus-jvm-hello-app
+    app.kubernetes.io/instance: quarkus-jvm-hello-app
+    app.kubernetes.io/name: quarkus-jvm-hello-app
+    app.kubernetes.io/part-of: java-apps
+    app.openshift.io/runtime: quarkus
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: quarkus-jvm-hello-app
+    deployment: quarkus-jvm-hello-app

@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: pyfastapi-hello-http
+spec:
+  subdomain: pyfastapi-hello
+  path: /
+  to:
+    kind: Service
+    name: pyfastapi-hello-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None

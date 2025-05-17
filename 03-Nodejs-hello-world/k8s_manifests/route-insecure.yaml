@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: nodejs-hello-http
+spec:
+  subdomain: nodejs-hello-http
+  path: /
+  to:
+    kind: Service
+    name: nodejs-hello-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None

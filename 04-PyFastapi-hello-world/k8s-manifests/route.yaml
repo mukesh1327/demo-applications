@@ -1,0 +1,21 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: pyfastapi-hello-app
+  labels:
+    app: pyfastapi-hello-app
+    app.kubernetes.io/name: pyfastapi-hello-app
+    app.kubernetes.io/part-of: python-apps
+    app.openshift.io/runtime: python
+spec:
+  subdomain: pyfastapi-hello-app
+  to:
+    kind: Service
+    name: pyfastapi-hello-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

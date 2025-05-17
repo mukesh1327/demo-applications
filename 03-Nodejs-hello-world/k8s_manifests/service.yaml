@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nodejs-hello-app
+  labels:
+    app: nodejs-hello-app
+    app.kubernetes.io/name: nodejs-hello-app
+    app.kubernetes.io/part-of: java-apps
+    app.openshift.io/runtime: nodejs
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: nodejs-hello-app
+    deployment: nodejs-hello-app

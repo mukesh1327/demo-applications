@@ -1,0 +1,34 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: springboot-hello-app
+  labels:
+    app: springboot-hello-app
+    app.kubernetes.io/name: springboot-hello-app
+    app.kubernetes.io/part-of: java-apps
+    app.openshift.io/runtime: spring-boot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-hello-app
+  template:
+    metadata:
+      labels:
+        app: springboot-hello-app
+        deployment: springboot-hello-app
+      annotations:
+    spec:
+      containers:
+        - name: springboot-hello-app
+          image: 'quay.io/mukeshs1306/noventiqvp-springboot-hello:latest'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: APP_TITLE
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-hello-app
+                  key: APP_TITLE
+          resources: {}

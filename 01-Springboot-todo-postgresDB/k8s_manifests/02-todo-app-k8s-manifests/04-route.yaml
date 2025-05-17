@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: springboot-todo
+spec:
+  subdomain: springboot-todo
+  to:
+    kind: Service
+    name: springboot-todo
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None

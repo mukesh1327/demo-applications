@@ -1,0 +1,61 @@
+schemaVersion: 2.2.2
+metadata:
+  name: Noventiq valuepoint PoCs
+components:
+  - name: springboot-healthcare-kafka-camel
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel9:latest
+      env:
+        - name: KUBEDOCK_ENABLED
+          value: 'true'
+        - name: JAVA_HOME
+          value: /usr/lib/jvm/java-21-openjdk
+      endpoints:
+        - exposure: public
+          name: health-data
+          protocol: https
+          targetPort: 8001
+          path: /api/v1/health-data
+        - exposure: public
+          name: health-alert
+          protocol: https
+          targetPort: 8001
+          path: /api/v1/alerts
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+
+    # Optional settings to limit the workspace resources
+
+      # cpuLimit: '4'
+      # cpuRequest: '1'
+      # memoryLimit: '8G'
+      # memoryRequest: '4G'
+
+      mountSources: true
+
+  - name: m2
+    volume:
+      size: 1G
+
+
+commands:
+  - id: springboot-healthcare-kafka-camel-localrun
+    exec:
+      label: "1. Run the springboot-healthcare-kafka-camel application in local"
+      component: springboot-healthcare-kafka-camel
+      workingDir: ${PROJECTS_ROOT}/noventiq-valuepoint/05-spring-boot-healthcare-kafka-camel
+      commandLine: "mvn spring-boot:run"
+      group:
+        kind: run
+        isDefault: false
+
+  - id: springboot-healthcare-kafka-camel-package
+    exec:
+      label: "2. Start Development mode (Hot reload + debug)"
+      component: springboot-healthcare-kafka-camel
+      workingDir: ${PROJECTS_ROOT}/camel-with-quarkus
+      commandLine: "mvn compile quarkus:dev"
+      group:
+        kind: build
+        isDefault: false
