@@ -1,6 +1,6 @@
-# Java Quarkus hello world - Noventiq value point
+# Java Quarkus todo world - Noventiq value point
 
-__A demo hello world java quarkus application__
+__A demo todo world java quarkus application__
 
 ___Running on port :___ 8080
 
@@ -26,25 +26,25 @@ APP_TITLE=string
 
 > mvn package
 
-> podman build -t quarkus-jvm-hello:v1.0 -f ./src/main/docker/Dockerfile.jvm .
+> podman build -t quarkus-jvm-todo:v1.0 -f ./src/main/docker/Dockerfile.jvm .
 
-> podman run -d -p 8080:8080 --name quarkus-jvm-hello quarkus-jvm-hello:v1.0
+> podman run -d -p 8080:8080 --name quarkus-jvm-todo quarkus-jvm-todo:v1.0
 
 <u>**_Run as Native_** </u>
 
 > mvn package -Pnative -Dquarkus.native.container-build=true -Dquarkus.native.container-runtime=podman
 
-> podman build -t quarkus-native-hello:v1.0 -f ./src/main/docker/Dockerfile.native .
+> podman build -t quarkus-native-todo:v1.0 -f ./src/main/docker/Dockerfile.native .
 
-> podman run -d -p 8080:8080 --name quarkus-native-hello quarkus-native-hello:v1.0
+> podman run -d -p 8080:8080 --name quarkus-native-todo quarkus-native-todo:v1.0
 
 <u>**_Run as Native-micro_**</u>
 
 > mvn package -Pnative -Dquarkus.native.container-build=true -Dquarkus.native.container-runtime=podman
 
-> podman build -t quarkus-nativemicro-hello:v1.0 -f ./src/main/docker/Dockerfile.native-micro .
+> podman build -t quarkus-nativemicro-todo:v1.0 -f ./src/main/docker/Dockerfile.native-micro .
 
-> podman run -d -p 8080:8080 --name quarkus-nativemicro-hello quarkus-nativemicro-hello:v1.0
+> podman run -d -p 8080:8080 --name quarkus-nativemicro-todo quarkus-nativemicro-todo:v1.0
 
 ## Deploy in k8s-ocp (Use any one)
 

@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: quarkus-jvm-hello-app
+  name: quarkus-jvm-todo-app
   labels:
-    app: quarkus-jvm-hello-app
-    app.kubernetes.io/component: quarkus-jvm-hello-app
-    app.kubernetes.io/instance: quarkus-jvm-hello-app
-    app.kubernetes.io/name: quarkus-jvm-hello-app
+    app: quarkus-jvm-todo-app
+    app.kubernetes.io/component: quarkus-jvm-todo-app
+    app.kubernetes.io/instance: quarkus-jvm-todo-app
+    app.kubernetes.io/name: quarkus-jvm-todo-app
     app.kubernetes.io/part-of: java-apps
     app.openshift.io/runtime: quarkus
 spec:
@@ -17,5 +17,5 @@ spec:
       targetPort: 8080
   type: ClusterIP
   selector:
-    app: quarkus-jvm-hello-app
-    deployment: quarkus-jvm-hello-app
+    app: quarkus-jvm-todo-app
+    deployment: quarkus-jvm-todo-app
