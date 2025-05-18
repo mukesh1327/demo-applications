@@ -46,9 +46,7 @@ spec:
           ports:
             - containerPort: 5432
               protocol: TCP
-          imagePullPolicy: Always
           volumeMounts:
             - name: postgres-todo-quarkus-vol
               mountPath: /var/lib/pgsql/data
           image: 'registry.redhat.io/rhel8/postgresql-15'
-      restartPolicy: Always
