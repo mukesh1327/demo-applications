@@ -1,6 +1,6 @@
 # Demo applications
 
-<u>___Available demo apps___</u>
+***Available demo apps***
 
 1. [Java SpringBoot Hello World](./01-Springboot-hello-world/README.md)
 
@@ -10,8 +10,7 @@
 
 4. [Python FastAPI Hello World](./04-PyFastapi-hello-world/README.md)
 
-
-<u>___Demo with databases___</u>
+***Demo with databases***
 
 Create database [manifests](./00-DB-manifests-OCP-K8s/README.md)
 
@@ -19,27 +18,25 @@ Create database [manifests](./00-DB-manifests-OCP-K8s/README.md)
 
 2. [Quarkus ToDo App demo](./02-Quarkus-todo-postgresDB/README.md)
 
-**Demo apps - Container images**
+***Demo apps - Container images***
 
-<u>_Hello world apps_</u>
+***Hello world apps***
 
-1. Python FastAPI Hello World - ___quay.io/mukeshs1306/noventiqvp-pyfastapi-hello:latest___
+1. Python FastAPI Hello World <!-- - ***quay.io/mukeshs1306/pyfastapi-hello:latest*** -->
 
-2. Java Spring-Boot Hello World - ___quay.io/mukeshs1306/noventiqvp-springboot-hello:latest___
+2. Java Spring-Boot Hello World <!-- - ***quay.io/mukeshs1306/springboot-hello:latest*** -->
 
 3. Java Quarkus Hello World  
-                             ___quay.io/mukeshs1306/noventiqvp-quarkus-jvm-hello:latest___    
-                             ___quay.io/mukeshs1306/noventiqvp-quarkus-native-hello:latest___   
-                             ___quay.io/mukeshs1306/noventiqvp-quarkus-nativemicro-hello:latest___
+                             <!-- ***quay.io/mukeshs1306/quarkus-jvm-hello:latest***  
+                             ***quay.io/mukeshs1306/quarkus-native-hello:latest***  
+                             ***quay.io/mukeshs1306/quarkus-nativemicro-hello:latest*** -->
 
-4. Javascript NodeJS Hello World - ___quay.io/mukeshs1306/noventiqvp-nodejs-hello:latest___
+4. Javascript NodeJS Hello World <!-- - ***quay.io/mukeshs1306/nodejs-hello:latest*** -->
 
+***Apps with DB***
 
-<u>_Apps with DB_</u>
-
-1. Java Spring-Boot ToDO app - ___quay.io/mukeshs1306/noventiqvp-springboot-pgdb-todo:latest___
-
-2. Java Quarkus ToDO app   
-                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
-                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
-                           ___quay.io/mukeshs1306/noventiqvp-quarkus-pgdb-todo:latest___
+1. Java Spring-Boot ToDO app <!-- - ***quay.io/mukeshs1306/springboot-pgdb-todo:latest*** -->
+2. Java Quarkus ToDO app  
+                           ***quay.io/mukeshs1306/quarkus-jvm-todo:latest***  
+                           ***quay.io/mukeshs1306/quarkus-native-todo:latest***  
+                           ***quay.io/mukeshs1306/quarkus-nativemicro-todo:latest***  
