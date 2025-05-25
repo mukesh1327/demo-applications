@@ -27,9 +27,9 @@ Create database [manifests](./00-DB-manifests-OCP-K8s/README.md)
 2. Java Spring-Boot Hello World <!-- - ***quay.io/mukeshs1306/springboot-hello:latest*** -->
 
 3. Java Quarkus Hello World  
-                             <!-- ***quay.io/mukeshs1306/quarkus-jvm-hello:latest***  
+                             ***quay.io/mukeshs1306/quarkus-jvm-hello:latest***  
                              ***quay.io/mukeshs1306/quarkus-native-hello:latest***  
-                             ***quay.io/mukeshs1306/quarkus-nativemicro-hello:latest*** -->
+                             ***quay.io/mukeshs1306/quarkus-nativemicro-hello:latest***
 
 4. Javascript NodeJS Hello World <!-- - ***quay.io/mukeshs1306/nodejs-hello:latest*** -->
 
