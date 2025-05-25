@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: quarkus-nativemicro-hello-app
-          image: 'quay.io/mukeshs1306/noventiqvp-quarkus-nativemicro-hello:latest'
+          image: 'quay.io/mukeshs1306/quarkus-nativemicro-hello:latest'
           ports:
             - containerPort: 8080
               protocol: TCP
