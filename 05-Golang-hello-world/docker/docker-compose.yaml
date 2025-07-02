@@ -1,0 +1,10 @@
+services:
+  hello-world-go:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: hello-world-go
+    image: hello-world-go:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
