@@ -8,7 +8,7 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.noventiqvaluepoint</groupId>
+	<groupId>com.cloudxplorer13</groupId>
 	<artifactId>springboot-hello</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>spring-boot-hello</name>
