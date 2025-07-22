@@ -1,0 +1,15 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: ''
+    app.openshift.io/vcs-uri: 'https://github.com/rh-vps/mvn-java-sudlife-helloworld.git'
+  name: hello-java-undertow
+  labels:
+    app: hello-java-undertow
+    app.kubernetes.io/component: hello-java-undertow
+    app.kubernetes.io/instance: hello-java-undertow
+    app.kubernetes.io/name: hello-java-undertow
+spec:
+  lookupPolicy:
+    local: false

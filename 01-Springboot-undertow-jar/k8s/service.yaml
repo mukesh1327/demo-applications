@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-java-undertow
+  labels:
+    app: hello-java-undertow
+    app.kubernetes.io/component: hello-java-undertow
+    app.kubernetes.io/instance: hello-java-undertow
+    app.kubernetes.io/name: hello-java-undertow
+  annotations:
+    app.openshift.io/vcs-ref: ''
+    app.openshift.io/vcs-uri: 'https://github.com/hash-as673/spring-demo-maven-jboss-jdk17.git'
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: hello-java-undertow
+    deployment: hello-java-undertow

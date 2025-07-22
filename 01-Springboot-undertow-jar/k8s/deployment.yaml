@@ -1,0 +1,39 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  annotations:
+    alpha.image.policy.openshift.io/resolve-names: '*'
+    app.openshift.io/route-disabled: 'false'
+    app.openshift.io/vcs-ref: ''
+    app.openshift.io/vcs-uri: 'https://github.com/rh-vps/mvn-java-sudlife-helloworld.git'
+    deployment.kubernetes.io/revision: '4'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"hello-java-undertow:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"hello-java-undertow\")].image","paused":false}]'
+  name: hello-java-undertow
+  labels:
+    app: hello-java-undertow
+    app.kubernetes.io/component: hello-java-undertow
+    app.kubernetes.io/instance: hello-java-undertow
+    app.kubernetes.io/name: hello-java-undertow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-java-undertow
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-java-undertow
+        deployment: hello-java-undertow
+    spec:
+      containers:
+        - name: hello-java-undertow
+          image: 'image-registry.openshift-image-registry.svc:5000/application/hello-java-undertow'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
